@@ -85,13 +85,20 @@ python -m cli.main search ask "What is the main topic of my documents?"
 
 ## Examples with Screenshots
 
+### Main
+![Main](screenshots/help.png)
+Shows the fetaures 
+
 ### Document Summarization
+![Document Summarization](screenshots/summarize.png)
 Summarize documents with a single command, extracting the key information from PDFs, Word documents, and more.
 
 ### Embedding Generation
+![Embedding Generation](screenshots/embedding.png)
 Generate vector embeddings for your documents to enable semantic search capabilities.
 
 ### Semantic Search
+![Semantic Search](screenshots/screenshots/search.png)
 Ask natural language questions about your documents and get AI-powered answers based on the content.
 
 ## Configuration
