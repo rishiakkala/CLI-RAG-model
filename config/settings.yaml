@@ -1,0 +1,53 @@
+# Instrukt AI Agents - Configuration Settings
+
+# Model Settings
+models:
+  mistral:
+    model_name: "mistral-small"
+    temperature: 0.7
+    max_tokens: 10000
+    api_key: ""  # Set via MISTRAL_API_KEY env var
+    api_base: "https://api.mistral.ai/v1"
+  
+  # Updated embedding section for Gemini API
+  embedding:
+    model_name: "gemini-embedding-exp-03-07"  # Gemini embedding model
+    api_key: ""  # Set via GEMINI_API_KEY env var
+    api_base: "https://generativelanguage.googleapis.com/v1beta"  # Gemini API base URL
+    use_local_fallback: true  # Keep fallback option
+    local_embedding_model: "all-MiniLM-L6-v2"
+    device: "cpu"
+    chunk_size: 512
+    chunk_overlap: 50
+
+# Agent Settings
+agents:
+  doc_loader:
+    supported_formats: [".pdf", ".docx", ".doc", ".md", ".txt"]
+    summary_lengths:
+      short: 100
+      medium: 250
+      long: 500
+  
+  code_scanner:
+    supported_languages: [".py", ".js", ".ts", ".java", ".c", ".cpp", ".cs", ".go", ".rb", ".php", ".rs", ".swift", ".kt", ".sh", ".html", ".css", ".sql"]
+  
+  embedder:
+    default_collection: "default"
+    vector_db_path: "data/index"
+  
+  searchbot:
+    default_collection: "default"
+    max_context_length: 4000
+    result_limit: 5
+
+# Data Paths
+paths:
+  docs: "data/docs"
+  code: "data/code"
+  index: "data/index"
+
+# CLI Settings
+cli:
+  default_output_format: "rich"
+  show_sources: true

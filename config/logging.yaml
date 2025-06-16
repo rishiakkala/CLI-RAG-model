@@ -1,0 +1,62 @@
+# Instrukt AI Agents - Logging Configuration
+
+version: 1
+formatters:
+  standard:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    datefmt: '%Y-%m-%d %H:%M:%S'
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: standard
+    stream: ext://sys.stdout
+
+  file:
+    class: logging.handlers.RotatingFileHandler
+    level: DEBUG
+    formatter: standard
+    filename: instrukt_ai_agents.log
+    maxBytes: 10485760  # 10MB
+    backupCount: 5
+    encoding: utf8
+
+loggers:
+  # Agent loggers
+  agents.doc_loader:
+    level: INFO
+    handlers: [console, file]
+    propagate: no
+
+  agents.code_scanner:
+    level: INFO
+    handlers: [console, file]
+    propagate: no
+
+  agents.embedder:
+    level: INFO
+    handlers: [console, file]
+    propagate: no
+
+  agents.searchbot:
+    level: INFO
+    handlers: [console, file]
+    propagate: no
+
+  # Model loggers
+  models:
+    level: INFO
+    handlers: [console, file]
+    propagate: no
+
+  # CLI logger
+  cli:
+    level: INFO
+    handlers: [console, file]
+    propagate: no
+
+root:
+  level: WARNING
+  handlers: [console, file]
+  propagate: no
