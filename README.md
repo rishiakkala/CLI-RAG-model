@@ -98,7 +98,7 @@ Summarize documents with a single command, extracting the key information from P
 Generate vector embeddings for your documents to enable semantic search capabilities.
 
 ### Semantic Search
-![Semantic Search](screenshots/screenshots/search.png)
+![Semantic Search](screenshots/search.png)
 Ask natural language questions about your documents and get AI-powered answers based on the content.
 
 ## Configuration
