@@ -126,15 +126,3 @@ If you encounter issues:
 2. Verify API keys are correctly set as environment variables
 3. Check the logs for detailed error messages
 4. Make sure the local fallback models are working if API access fails
-
-## License
-
-[Add your license information here]
-
-## Contributing
-
-[Add contribution guidelines here]
-
-## Support
-
-[Add support/contact information here]
